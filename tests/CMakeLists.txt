@@ -1,0 +1,6 @@
+find_package(Qt6 6.8 REQUIRED COMPONENTS Test)
+qt_add_executable(ket_image_viewer_tests viewer_tests.cpp)
+set_target_properties(ket_image_viewer_tests PROPERTIES AUTOMOC ON)
+target_link_libraries(ket_image_viewer_tests PRIVATE Ket::ImageViewer Qt6::Test)
+add_test(NAME image_viewer_contract COMMAND ket_image_viewer_tests -platform offscreen)
+set_tests_properties(image_viewer_contract PROPERTIES TIMEOUT 45)

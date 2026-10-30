@@ -1,0 +1,5 @@
+@PACKAGE_INIT@
+include(CMakeFindDependencyMacro)
+find_dependency(Qt6 6.8 COMPONENTS Widgets Concurrent)
+include("${CMAKE_CURRENT_LIST_DIR}/KetImageViewerTargets.cmake")
+check_required_components(KetImageViewer)

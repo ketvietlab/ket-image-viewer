@@ -1,0 +1,4 @@
+/build/
+/stage/
+.DS_Store
+*.user

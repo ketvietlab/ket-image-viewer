@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.24)
+project(KetImageViewerConsumer LANGUAGES CXX)
+find_package(KetImageViewer 0.1 REQUIRED CONFIG)
+add_executable(consumer main.cpp)
+target_link_libraries(consumer PRIVATE Ket::ImageViewer)
