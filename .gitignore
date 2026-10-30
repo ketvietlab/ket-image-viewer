@@ -2,3 +2,5 @@
 /stage/
 .DS_Store
 *.user
+
+/dist/

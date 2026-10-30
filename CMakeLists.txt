@@ -40,6 +40,8 @@ write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/KetImageViewerConfi
     VERSION ${PROJECT_VERSION} COMPATIBILITY SameMinorVersion)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/KetImageViewerConfig.cmake ${CMAKE_CURRENT_BINARY_DIR}/KetImageViewerConfigVersion.cmake
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/KetImageViewer)
+install(FILES README.md DESTINATION ${CMAKE_INSTALL_DOCDIR})
+install(DIRECTORY docs/ DESTINATION ${CMAKE_INSTALL_DOCDIR})
 install(FILES LICENSE DESTINATION ${CMAKE_INSTALL_DATADIR}/licenses/KetImageViewer)
 if(KET_IMAGE_VIEWER_BUILD_EXAMPLES)
     add_subdirectory(examples/gallery)

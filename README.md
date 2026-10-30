@@ -35,6 +35,12 @@ On Linux/Windows, run the `Két Image Viewer` executable in `build/dev/examples/
 
 The demo owns a Fusion style and Két-colored light/dark palettes. The library does not change application-wide style, font or palette. Fonts are not bundled.
 
+## Release artifacts
+
+The first release is `v0.1.0`. GitHub releases provide a source archive and a macOS arm64 static SDK built in Release mode against Qt 6.11.2. The SDK includes headers, the library and a relocatable CMake package; it requires a compatible Qt/toolchain installation. Qt runtimes, application signing and notarization are not included. Other platforms should build from the source archive.
+
+Verify downloads with `shasum -a 256 -c SHA256SUMS`. To reproduce the macOS build from a clean committed checkout, run `bash tools/release-macos.sh`; it runs the library contract tests and an installed-package consumer before creating archives under `dist/v0.1.0`.
+
 ## Embed
 
 ```cmake
